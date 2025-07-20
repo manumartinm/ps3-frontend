@@ -27,6 +27,7 @@ export function FileUploadButton({ onData, onStart }: FileUploadButtonProps) {
           },
           body: formData,
         });
+        
         const data = await res.json();
         if (data.extracted_data && data.odds_path_data) {
           onData({
